@@ -1,0 +1,25 @@
+{
+  "name": "pdfserver",
+  "version": "1.0.0",
+  "description": "RESTful pdf service",
+  "main": "index.js",
+  "scripts": {
+    "test": "na"
+  },
+  "keywords": [
+    "RESTful",
+    "API"
+  ],
+  "author": "augusutus",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.1"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.581.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.7.12",
+    "multer": "^1.4.2",
+    "multer-s3": "^2.9.0"
+  }
+}
