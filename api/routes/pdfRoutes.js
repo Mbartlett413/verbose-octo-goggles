@@ -10,9 +10,17 @@ module.exports = function(app) {
   app.route('/scrapePDF')
   	.get(todoList.getPDF)
     .post(todoList.createPDF)
+    .delete(todoList.delete_a_pdf)
 
   app.route('/tasks/:taskId')
     .get(todoList.read_a_task)
     .put(todoList.update_a_task)
     .delete(todoList.delete_a_task);
+
+  app.route('/validateCatalog')
+    .post(todoList.validateCatalog)
 };
+
+
+
+

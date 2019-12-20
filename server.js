@@ -1,15 +1,17 @@
 var express = require('express'),
+  cors = require('cors'),
   app = express(),
-  port = process.env.PORT || 3000,
+  port = process.env.PORT || 3030,
   mongoose = require('mongoose'),
   Task = require('./api/models/pdfModel'), //created model loading here
+  Pdf = require('./api/models/pdfModeltwo'), //created model loading here
   bodyParser = require('body-parser');
   
 // mongoose instance connection url connection
 mongoose.Promise = global.Promise;
 mongoose.connect('mongodb://localhost/Tododb'); 
 
-
+app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
